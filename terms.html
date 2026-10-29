@@ -1,19 +1,252 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>MyVidUploader Terms of Service</title></head>
-<body style="font-family:sans-serif;max-width:700px;margin:40px auto;padding:0 16px">
-<h1>MyVidUploader Terms of Service</h1>
-<p><em>Last updated: October 29, 2026</em></p>
-<p>MyVidUploader is a personal tool I use to upload and manage my own TikTok videos through TikTok's official Content Posting API.</p>
-<h3>Use of the app</h3>
-<ul>
-<li>The app is only used with my own TikTok account.</li>
-<li>Only content that I own or have the rights to is uploaded.</li>
-<li>The app follows TikTok's Terms of Service and Community Guidelines, and is not used for spam.</li>
-</ul>
-<h3>Access</h3>
-<p>Access can be revoked at any time in TikTok under Settings → Security → Manage app permissions.</p>
-<h3>Disclaimer</h3>
-<p>The app is provided as is, without warranties of any kind.</p>
-<h3>Contact</h3>
-<p>thecolumdrone@gmail.com</p>
-</body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyVidUploader Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --desk: #2a3342;
+    --desk-deep: #1f2733;
+    --paper: #fefefd;
+    --ink: #1c2433;
+    --muted: #5b6575;
+    --rule: #d8dce3;
+    --accent: #0d6b72;
+    --sans: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 56px 16px 72px;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #36425a 0%, transparent 70%),
+      var(--desk);
+    background-color: var(--desk);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 15.5px;
+    line-height: 1.68;
+    font-optical-sizing: auto;
+  }
+
+  /* The A4 sheet */
+  .sheet {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 210mm;
+    max-width: 100%;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 24mm 26mm 16mm;
+    background: var(--paper);
+    border-radius: 2px;
+    box-shadow:
+      0 1px 1px rgba(0, 0, 0, 0.25),
+      0 8px 16px -4px rgba(0, 0, 0, 0.35),
+      0 40px 80px -20px rgba(0, 0, 0, 0.55);
+  }
+
+  /* Document header */
+  .doc-head {
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .app-name {
+    margin: 0 0 6px;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--accent);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 2.45rem;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 36px;
+    margin: 20px 0 0;
+    padding: 0;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .meta div { display: flex; gap: 8px; }
+  .meta dt { font-weight: 700; color: var(--ink); }
+  .meta dd { margin: 0; }
+
+  .lede {
+    margin: 28px 0 8px;
+    font-size: 1.13rem;
+    line-height: 1.6;
+  }
+
+  /* Numbered clauses */
+  main { counter-reset: clause; }
+
+  h2 {
+    counter-increment: clause;
+    display: flex;
+    align-items: baseline;
+    gap: 0.7em;
+    margin: 34px 0 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+  }
+  h2::before {
+    content: counter(clause) ".";
+    min-width: 1.4em;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  p { margin: 0 0 12px; }
+
+  /* Clause body aligns under the heading text, not the number */
+  h2 + p, h2 + ul { margin-left: 2.1em; }
+
+  ul { margin: 0 0 12px; padding: 0; list-style: none; }
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    margin-bottom: 7px;
+  }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.78em;
+    width: 0.5em;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Page footer, pinned to the bottom of the sheet */
+  .doc-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .main-spacer { height: 40px; }
+  .doc-foot nav { display: flex; gap: 18px; }
+  .doc-foot a { color: var(--muted); }
+  .doc-foot a[aria-current="page"] {
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* Phones: let the sheet fill the screen */
+  @media (max-width: 760px) {
+    body { padding: 0; background: var(--paper); }
+    .sheet {
+      width: 100%;
+      min-height: 100vh;
+      padding: 40px 24px 24px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    h1 { font-size: 2rem; }
+    h2 + p, h2 + ul { margin-left: 0; }
+  }
+
+  /* Printing / Save as PDF: a true A4 page */
+  @page { size: A4; margin: 0; }
+  @media print {
+    body { padding: 0; background: #fff; }
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="doc-head">
+      <p class="app-name">MyVidUploader</p>
+      <h1>Terms of Service</h1>
+      <dl class="meta">
+        <div><dt>Last updated</dt><dd>October 29, 2026</dd></div>
+        <div><dt>Contact</dt><dd>thecolumdrone@gmail.com</dd></div>
+      </dl>
+    </header>
+
+    <main>
+      <p class="lede">MyVidUploader is a personal tool I use to upload and manage my own TikTok videos through TikTok’s official Content Posting API.</p>
+
+      <h2>Use of the app</h2>
+      <ul>
+        <li>The app is only used with my own TikTok account.</li>
+        <li>Only content that I own or have the rights to is uploaded.</li>
+        <li>The app follows TikTok’s Terms of Service and Community Guidelines, and is not used for spam.</li>
+      </ul>
+
+      <h2>Access</h2>
+      <p>Access can be revoked at any time in TikTok under Settings → Security → Manage app permissions.</p>
+
+      <h2>Disclaimer</h2>
+      <p>The app is provided as is, without warranties of any kind.</p>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:thecolumdrone@gmail.com">thecolumdrone@gmail.com</a></p>
+    </main>
+
+    <div class="main-spacer"></div>
+
+    <footer class="doc-foot">
+      <span>MyVidUploader · Page 1 of 1</span>
+      <nav aria-label="Legal documents">
+        <a href="terms.html" aria-current="page">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </footer>
+  </article>
+</body>
+</html>
